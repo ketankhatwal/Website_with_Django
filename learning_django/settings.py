@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = 'b)+y8&56*n3cs3ud$q#(0s-4v^^dz%ixc*#o-l2q_0gr_64vvr'
 SECRET_KEY=os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['dreamchaser14.herokuapp.com']
 
@@ -136,7 +136,7 @@ MEDIA_URL='/media/'
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
+EMAIL_PORT=465
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER=os.environ.get('EMAIL_USERNAME')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
