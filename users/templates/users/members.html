@@ -1,0 +1,17 @@
+{% extends "social/layout.html" %}
+{% block content %}
+	{%for user in members%}
+		<div class="container justify-content-center" style="border-radius: 10px;background-color: rgba(255,255,255,0.6); margin-top: 10px;padding: 10px ; max-width: 800px;">
+		<div class="row">
+			<div class="col-md-3">
+			<img src="{{user.profile.profile_pic.url}}" style="width: 150px; height: 150px; border-radius: 50%;">	
+			</div>
+			<div class="col">
+			<h2>{{user.username}}</h2>
+			<p >{{user.email}}</p>
+			</div>
+		</div>
+		</div>
+	
+	{% endfor %}
+{% endblock content %}

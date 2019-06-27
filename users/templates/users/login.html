@@ -1,0 +1,22 @@
+{% extends "social/layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="container" style="background-color: rgba(255,255,255,0.5);padding-right: 1%;padding-left: 1%;margin-top: 5px;border-radius: 10px; width: 25%;">
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4" style='text-align: center';>Log In</legend>
+				{{form|crispy}}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-info" type="submit">Log In</button>
+			</div>
+			<div class="form-group">
+				<small>Need an Account? <a href="{% url 'register' %}">Register</a> Here</small>
+			</div>
+			<div class="form-group"  style="padding-bottom: 10px;">
+				<small><a href="{% url 'password_reset' %}">Forgot Password?</a></small>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
