@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = 'b)+y8&56*n3cs3ud$q#(0s-4v^^dz%ixc*#o-l2q_0gr_64vvr'
 SECRET_KEY=os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'False')
 
 ALLOWED_HOSTS = ['dreamchaser14.herokuapp.com']
 
